@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pago</title>
+  <link rel="stylesheet" href="Formulariop.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card__header">
+        <p class="eyebrow">Checkout</p>
+        <h1>Formulario de Pago</h1>
+        <p class="subtitle">Completa los datos para finalizar tu compra de forma segura.</p>
+      </header>
+
+      <form class="payment-form" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>1. Datos personales</legend>
+          <div class="grid two-columns">
+            <label>
+              Nombre
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </label>
+
+            <label>
+              Apellido
+              <input type="text" name="apellido" placeholder="Tu apellido" required>
+            </label>
+
+            <label>
+              Correo electrónico
+              <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+            </label>
+
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" placeholder="+34 600 000 000" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Dirección de entrega</legend>
+          <div class="grid two-columns">
+            <label class="full">
+              Dirección
+              <input type="text" name="direccion" placeholder="Calle y número" required>
+            </label>
+
+            <label>
+              Ciudad
+              <input type="text" name="ciudad" placeholder="Ciudad" required>
+            </label>
+
+            <label>
+              Provincia / Estado
+              <input type="text" name="provincia" placeholder="Provincia o Estado" required>
+            </label>
+
+            <label>
+              Código postal
+              <input type="text" name="cp" placeholder="00000" required>
+            </label>
+
+            <label>
+              País
+              <input type="text" name="pais" placeholder="País" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Pago con tarjeta</legend>
+          <div class="grid two-columns">
+            <label class="full">
+              Nombre del titular
+              <input type="text" name="titular" placeholder="Como aparece en la tarjeta" required>
+            </label>
+
+            <label class="full">
+              Número de tarjeta
+              <input type="text" name="numero_tarjeta" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+            </label>
+
+            <label>
+              Fecha de vencimiento
+              <input type="text" name="vencimiento" placeholder="MM/AA" maxlength="5" required>
+            </label>
+
+            <label>
+              CVV
+              <input type="password" name="cvv" inputmode="numeric" maxlength="4" placeholder="123" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Pagar ahora</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
