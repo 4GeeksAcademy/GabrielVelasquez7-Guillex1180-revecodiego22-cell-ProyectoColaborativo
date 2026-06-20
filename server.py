@@ -13,10 +13,10 @@ app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0  # Desactiva cache durante desarroll
 
 @app.route("/", methods=["GET"])
 def serve_catalog():
-    catalog_path = os.path.join(static_file_dir, "catalog.html")
+    catalog_path = os.path.join(static_file_dir, "index.html")
     if not os.path.isfile(catalog_path):
-        abort(404, description="No se encontró catalog.html")
-    return send_from_directory(static_file_dir, "catalog.html")
+        abort(404, description="No se encontró index.html")
+    return send_from_directory(static_file_dir, "index.html")
 
 
 @app.route("/<path:path>", methods=["GET"])

@@ -1,104 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Pago</title>
-  <link rel="stylesheet" href="Formulariop.css">
-</head>
-<body>
-  <main class="page">
-    <section class="card">
-      <header class="card__header">
-        <p class="eyebrow">Checkout</p>
-        <h1>Formulario de Pago</h1>
-        <p class="subtitle">Completa los datos para finalizar tu compra de forma segura.</p>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Código Urbano</title>
+    <meta name="description" content="Completa tus datos de envío y pago para finalizar tu compra simulada en Código Urbano." />
 
-      <form class="payment-form" action="#" method="post" novalidate>
-        <fieldset>
-          <legend>1. Datos personales</legend>
-          <div class="grid two-columns">
-            <label>
-              Nombre
-              <input type="text" name="nombre" placeholder="Tu nombre" required>
-            </label>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
 
-            <label>
-              Apellido
-              <input type="text" name="apellido" placeholder="Tu apellido" required>
-            </label>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-            <label>
-              Correo electrónico
-              <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-            </label>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CheckoutPage",
+        "name": "Checkout | Código Urbano",
+        "description": "Formulario de envío y pago del flujo de compra simulado.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Código Urbano"
+        }
+      }
+    </script>
+  </head>
 
-            <label>
-              Teléfono
-              <input type="tel" name="telefono" placeholder="+34 600 000 000" required>
-            </label>
+  <body class="min-h-screen bg-[radial-gradient(circle_at_8%_8%,#ffedd5_0,transparent_35%),radial-gradient(circle_at_90%_12%,#fdba74_0,transparent_30%),#fffaf3] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
+    <a href="#checkout" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-stone-900 focus:px-5 focus:py-3 focus:font-bold focus:text-white focus:outline-none focus:ring-4 focus:ring-orange-500/50">
+      Saltar al checkout
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
+          Código Urbano<span class="text-orange-500">.</span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center gap-2 text-sm font-semibold sm:gap-4 sm:text-base">
+            <li><a href="index.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
+            <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Catálogo</a></li>
+            <li><a href="carrito.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Carrito</a></li>
+            <li><a href="Formulario.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Checkout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="checkout" class="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mb-8 flex flex-col gap-3 border-b border-stone-200/70 pb-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <span class="inline-flex rounded-full bg-orange-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-700">Paso 3 de 4</span>
+          <h1 class="mt-4 font-['Sora',sans-serif] text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">Formulario de pago</h1>
+          <p class="mt-2 text-stone-600">Completa la información para finalizar la compra simulada.</p>
+        </div>
+        <a href="carrito.html" class="text-sm font-semibold text-stone-600 transition-colors hover:text-orange-600">Volver al carrito</a>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
+        <section class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+          <form action="Formulariop.html" method="get" class="space-y-7">
+            <fieldset class="space-y-4">
+              <legend class="mb-4 font-['Sora',sans-serif] text-lg font-bold text-stone-900">1. Datos personales</legend>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="text-sm font-semibold text-stone-600">Nombre
+                  <input type="text" name="nombre" required placeholder="Tu nombre" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">Apellido
+                  <input type="text" name="apellido" required placeholder="Tu apellido" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600 sm:col-span-2">Correo electrónico
+                  <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600 sm:col-span-2">Teléfono
+                  <input type="tel" name="telefono" required placeholder="+34 600 000 000" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-4">
+              <legend class="mb-4 font-['Sora',sans-serif] text-lg font-bold text-stone-900">2. Dirección de entrega</legend>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="text-sm font-semibold text-stone-600 sm:col-span-2">Dirección
+                  <input type="text" name="direccion" required placeholder="Calle y número" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">Ciudad
+                  <input type="text" name="ciudad" required placeholder="Ciudad" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">Provincia o estado
+                  <input type="text" name="provincia" required placeholder="Provincia o Estado" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">Código postal
+                  <input type="text" name="cp" required placeholder="00000" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">País
+                  <input type="text" name="pais" required placeholder="País" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-4">
+              <legend class="mb-4 font-['Sora',sans-serif] text-lg font-bold text-stone-900">3. Pago con tarjeta</legend>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label class="text-sm font-semibold text-stone-600 sm:col-span-2">Nombre del titular
+                  <input type="text" name="titular" required placeholder="Como aparece en la tarjeta" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600 sm:col-span-2">Número de tarjeta
+                  <input type="text" name="numero_tarjeta" inputmode="numeric" maxlength="19" required placeholder="1234 5678 9012 3456" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">Fecha de vencimiento
+                  <input type="text" name="vencimiento" maxlength="5" required placeholder="MM/AA" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+                <label class="text-sm font-semibold text-stone-600">CVV
+                  <input type="password" name="cvv" inputmode="numeric" maxlength="4" required placeholder="123" class="mt-2 w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:bg-white focus:outline-none" />
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="w-full rounded-full bg-orange-600 px-6 py-4 text-center font-['Sora',sans-serif] text-base font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/30 active:scale-[0.99]">
+              Confirmar y pagar
+            </button>
+          </form>
+        </section>
+
+        <aside class="space-y-6 lg:sticky lg:top-24">
+          <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+            <h2 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900">Resumen rápido</h2>
+            <dl class="mt-5 space-y-3 text-sm text-stone-600">
+              <div class="flex items-center justify-between"><dt>Subtotal</dt><dd class="font-semibold text-stone-900">$303.00</dd></div>
+              <div class="flex items-center justify-between"><dt>Impuestos (10%)</dt><dd class="font-semibold text-stone-900">$30.30</dd></div>
+              <div class="flex items-center justify-between border-t border-stone-100 pt-3"><dt class="font-bold text-stone-900">Total</dt><dd class="font-['Sora',sans-serif] text-xl font-extrabold text-orange-600">$333.30</dd></div>
+            </dl>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend>2. Dirección de entrega</legend>
-          <div class="grid two-columns">
-            <label class="full">
-              Dirección
-              <input type="text" name="direccion" placeholder="Calle y número" required>
-            </label>
-
-            <label>
-              Ciudad
-              <input type="text" name="ciudad" placeholder="Ciudad" required>
-            </label>
-
-            <label>
-              Provincia / Estado
-              <input type="text" name="provincia" placeholder="Provincia o Estado" required>
-            </label>
-
-            <label>
-              Código postal
-              <input type="text" name="cp" placeholder="00000" required>
-            </label>
-
-            <label>
-              País
-              <input type="text" name="pais" placeholder="País" required>
-            </label>
+          <div class="rounded-2xl border border-stone-200/60 bg-white/50 p-5 text-xs text-stone-500 shadow-inner">
+            Este proceso es una simulación de compra para practicar el flujo de navegación.
           </div>
-        </fieldset>
+        </aside>
+      </div>
+    </main>
 
-        <fieldset>
-          <legend>3. Pago con tarjeta</legend>
-          <div class="grid two-columns">
-            <label class="full">
-              Nombre del titular
-              <input type="text" name="titular" placeholder="Como aparece en la tarjeta" required>
-            </label>
-
-            <label class="full">
-              Número de tarjeta
-              <input type="text" name="numero_tarjeta" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
-            </label>
-
-            <label>
-              Fecha de vencimiento
-              <input type="text" name="vencimiento" placeholder="MM/AA" maxlength="5" required>
-            </label>
-
-            <label>
-              CVV
-              <input type="password" name="cvv" inputmode="numeric" maxlength="4" placeholder="123" required>
-            </label>
-          </div>
-        </fieldset>
-
-        <button type="submit">Pagar ahora</button>
-      </form>
-    </section>
-  </main>
-</body>
+    <footer class="mt-12 border-t border-stone-200 bg-white py-10 text-center sm:py-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-stone-500">
+          © 2026 <strong class="font-['Sora',sans-serif] font-bold text-stone-900">Código Urbano</strong>. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
+          <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a>
+          <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+          <a href="Formulario.html" class="transition-colors hover:text-orange-600">Checkout</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>

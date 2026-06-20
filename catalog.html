@@ -21,6 +21,41 @@
     
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <style>
+      #cat-calzado:checked ~ main #catalogo .product-card:not([data-cat="calzado"]),
+      #cat-camisas:checked ~ main #catalogo .product-card:not([data-cat="camisas"]),
+      #cat-pantalones:checked ~ main #catalogo .product-card:not([data-cat="pantalones"]),
+      #cat-accesorios:checked ~ main #catalogo .product-card:not([data-cat="accesorios"]),
+      #size-xs:checked ~ main #catalogo .product-card:not([data-size="xs"]),
+      #size-s:checked ~ main #catalogo .product-card:not([data-size="s"]),
+      #size-m:checked ~ main #catalogo .product-card:not([data-size="m"]),
+      #size-l:checked ~ main #catalogo .product-card:not([data-size="l"]),
+      #size-xl:checked ~ main #catalogo .product-card:not([data-size="xl"]) {
+        display: none;
+      }
+
+      #cat-all:checked ~ main label[for="cat-all"],
+      #cat-calzado:checked ~ main label[for="cat-calzado"],
+      #cat-camisas:checked ~ main label[for="cat-camisas"],
+      #cat-pantalones:checked ~ main label[for="cat-pantalones"],
+      #cat-accesorios:checked ~ main label[for="cat-accesorios"] {
+        border-color: #f97316;
+        background: #f97316;
+        color: #fff;
+      }
+
+      #size-all:checked ~ main label[for="size-all"],
+      #size-xs:checked ~ main label[for="size-xs"],
+      #size-s:checked ~ main label[for="size-s"],
+      #size-m:checked ~ main label[for="size-m"],
+      #size-l:checked ~ main label[for="size-l"],
+      #size-xl:checked ~ main label[for="size-xl"] {
+        border-color: #0d9488;
+        background: #0d9488;
+        color: #fff;
+      }
+    </style>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,18 +78,18 @@
       Saltar al catálogo
     </a>
 
-    <input id="cat-all" name="categoria" type="radio" class="peer/cat-all sr-only" checked />
-    <input id="cat-calzado" name="categoria" type="radio" class="peer/cat-calzado sr-only" />
-    <input id="cat-camisas" name="categoria" type="radio" class="peer/cat-camisas sr-only" />
-    <input id="cat-pantalones" name="categoria" type="radio" class="peer/cat-pantalones sr-only" />
-    <input id="cat-accesorios" name="categoria" type="radio" class="peer/cat-accesorios sr-only" />
+    <input id="cat-all" name="categoria" type="radio" class="sr-only" checked />
+    <input id="cat-calzado" name="categoria" type="radio" class="sr-only" />
+    <input id="cat-camisas" name="categoria" type="radio" class="sr-only" />
+    <input id="cat-pantalones" name="categoria" type="radio" class="sr-only" />
+    <input id="cat-accesorios" name="categoria" type="radio" class="sr-only" />
 
-    <input id="size-all" name="talla" type="radio" class="peer/size-all sr-only" checked />
-    <input id="size-xs" name="talla" type="radio" class="peer/size-xs sr-only" />
-    <input id="size-s" name="talla" type="radio" class="peer/size-s sr-only" />
-    <input id="size-m" name="talla" type="radio" class="peer/size-m sr-only" />
-    <input id="size-l" name="talla" type="radio" class="peer/size-l sr-only" />
-    <input id="size-xl" name="talla" type="radio" class="peer/size-xl sr-only" />
+    <input id="size-all" name="talla" type="radio" class="sr-only" checked />
+    <input id="size-xs" name="talla" type="radio" class="sr-only" />
+    <input id="size-s" name="talla" type="radio" class="sr-only" />
+    <input id="size-m" name="talla" type="radio" class="sr-only" />
+    <input id="size-l" name="talla" type="radio" class="sr-only" />
+    <input id="size-xl" name="talla" type="radio" class="sr-only" />
 
     <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
       <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
@@ -63,8 +98,10 @@
         </a>
         <nav aria-label="Navegación principal">
           <ul class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm font-semibold sm:text-base">
-            <li><a href="index.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Inicio</a></li>
+            <li><a href="index.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
+            <li><a href="catalog.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Catálogo</a></li>
             <li><a href="carrito.html" class="inline-block rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Carrito</a></li>
+            <li><a href="Formulario.html" class="inline-block rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Checkout</a></li>
           </ul>
         </nav>
       </div>
@@ -80,6 +117,10 @@
           <p class="mt-6 max-w-xl text-lg text-stone-600 leading-relaxed sm:text-xl">
             Descubre nuestra selección de calzado, camisas, pantalones y accesorios. Encuentra el fit perfecto para tu día a día en la ciudad.
           </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="carrito.html" class="rounded-full bg-orange-600 px-6 py-3 font-['Sora',sans-serif] text-sm font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700">Ir al carrito</a>
+            <a href="Formulario.html" class="rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-bold text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Ir al checkout</a>
+          </div>
         </div>
         
         <aside class="relative overflow-hidden rounded-3xl border border-white bg-white/60 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm lg:p-10">
@@ -110,23 +151,23 @@
             <fieldset>
               <legend class="mb-4 text-xs font-bold uppercase tracking-widest text-stone-400">Categoría</legend>
               <div class="flex flex-wrap gap-2.5">
-                <label for="cat-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-all:border-orange-500 peer-checked/cat-all:bg-orange-500 peer-checked/cat-all:text-white">Todas</label>
-                <label for="cat-calzado" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-calzado:border-orange-500 peer-checked/cat-calzado:bg-orange-500 peer-checked/cat-calzado:text-white">Calzado</label>
-                <label for="cat-camisas" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-camisas:border-orange-500 peer-checked/cat-camisas:bg-orange-500 peer-checked/cat-camisas:text-white">Camisas</label>
-                <label for="cat-pantalones" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-pantalones:border-orange-500 peer-checked/cat-pantalones:bg-orange-500 peer-checked/cat-pantalones:text-white">Pantalones</label>
-                <label for="cat-accesorios" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-accesorios:border-orange-500 peer-checked/cat-accesorios:bg-orange-500 peer-checked/cat-accesorios:text-white">Accesorios</label>
+                <label for="cat-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Todas</label>
+                <label for="cat-calzado" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Calzado</label>
+                <label for="cat-camisas" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Camisas</label>
+                <label for="cat-pantalones" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Pantalones</label>
+                <label for="cat-accesorios" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Accesorios</label>
               </div>
             </fieldset>
 
             <fieldset>
               <legend class="mb-4 text-xs font-bold uppercase tracking-widest text-stone-400">Talla</legend>
               <div class="flex flex-wrap gap-2.5">
-                <label for="size-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-all:border-teal-600 peer-checked/size-all:bg-teal-600 peer-checked/size-all:text-white">Todas</label>
-                <label for="size-xs" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-xs:border-teal-600 peer-checked/size-xs:bg-teal-600 peer-checked/size-xs:text-white">XS</label>
-                <label for="size-s" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-s:border-teal-600 peer-checked/size-s:bg-teal-600 peer-checked/size-s:text-white">S</label>
-                <label for="size-m" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-m:border-teal-600 peer-checked/size-m:bg-teal-600 peer-checked/size-m:text-white">M</label>
-                <label for="size-l" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-l:border-teal-600 peer-checked/size-l:bg-teal-600 peer-checked/size-l:text-white">L</label>
-                <label for="size-xl" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-xl:border-teal-600 peer-checked/size-xl:bg-teal-600 peer-checked/size-xl:text-white">XL</label>
+                <label for="size-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">Todas</label>
+                <label for="size-xs" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">XS</label>
+                <label for="size-s" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">S</label>
+                <label for="size-m" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">M</label>
+                <label for="size-l" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">L</label>
+                <label for="size-xl" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100">XL</label>
               </div>
             </fieldset>
           </div>
@@ -136,16 +177,16 @@
       <section id="catalogo" class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8" aria-label="Listado de productos">
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="list">
           
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="calzado" data-size="m" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-runner" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" alt="Zapatillas Runner 150" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-orange-50 px-2.5 py-1 text-xs font-bold text-orange-600">Calzado</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html" class="transition-colors hover:text-orange-600">Zapatillas Runner 150</a></h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-runner" class="transition-colors hover:text-orange-600">Zapatillas Runner 150</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Comodidad y agarre urbano para tu día a día, perfectas para moverte ágil por la ciudad.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="65">65</span></p>
@@ -153,16 +194,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="calzado" data-size="l" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-botas" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&q=80" alt="Botas Clásicas Premium" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-orange-50 px-2.5 py-1 text-xs font-bold text-orange-600">Calzado</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla L</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html" class="transition-colors hover:text-orange-600">Botas Clásicas Premium</a></h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-botas" class="transition-colors hover:text-orange-600">Botas Clásicas Premium</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Cuero genuino resistente a la abrasión, diseño estructurado y duradero.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="95">95</span></p>
@@ -170,16 +211,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="camisas" data-size="l" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-chaqueta" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80" alt="Chaqueta de Malla HWK" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla L</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Chaqueta de Malla HWK</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-chaqueta" class="transition-colors hover:text-orange-600">Chaqueta de Malla HWK</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Ventilación superior y seguridad reforzada. Ideal para rutas largas o uso diario.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="110">110</span></p>
@@ -187,16 +228,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="camisas" data-size="s" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-camiseta" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Camiseta Grand Line" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla S</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Camiseta Grand Line</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-camiseta" class="transition-colors hover:text-orange-600">Camiseta Grand Line</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Algodón peinado con estampado de alta densidad inspirado en aventuras piratas.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="25">25</span></p>
@@ -204,16 +245,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="camisas" data-size="m" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-sobrecamisa" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80" alt="Sobrecamisa Oxford" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Sobrecamisa Oxford</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-sobrecamisa" class="transition-colors hover:text-orange-600">Sobrecamisa Oxford</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Corte regular y tela transpirable, perfecta para estructurar cualquier outfit.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="45">45</span></p>
@@ -221,16 +262,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="pantalones" data-size="m" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-joggers" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80" alt="Joggers Palo Verde" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-stone-800 px-2.5 py-1 text-xs font-bold text-white">Pantalones</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Joggers Palo Verde</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-joggers" class="transition-colors hover:text-orange-600">Joggers Palo Verde</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Joggers elásticos de secado rápido, creados para resistir el ritmo activo.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="35">35</span></p>
@@ -238,16 +279,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="pantalones" data-size="xl" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-jeans" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Jeans Rectos Flexbox" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-stone-800 px-2.5 py-1 text-xs font-bold text-white">Pantalones</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla XL</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Jeans Rectos Flexbox</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-jeans" class="transition-colors hover:text-orange-600">Jeans Rectos Flexbox</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Denim con tecnología elástica oculta. Alineación perfecta y comodidad semántica.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="55">55</span></p>
@@ -255,16 +296,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="accesorios" data-size="xs" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-gorra" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=600&q=80" alt="Gorra Vintage Ajustable" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-700">Accesorios</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla XS</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Gorra Vintage Ajustable</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-gorra" class="transition-colors hover:text-orange-600">Gorra Vintage Ajustable</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Algodón lavado para un look retro, con cierre metálico ajustable.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="18">18</span></p>
@@ -272,16 +313,16 @@
             </div>
           </article>
 
-          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/size-xs:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
-            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+          <article role="listitem" class="product-card group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl" data-cat="accesorios" data-size="s" itemscope itemtype="https://schema.org/Product">
+            <a href="producto.html#prod-cinturon" class="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-stone-100">
               <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=600&q=80" alt="Cinturón de Cuero" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-            </div>
+            </a>
             <div class="flex flex-1 flex-col p-5">
               <div class="mb-3 flex items-center justify-between">
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-700">Accesorios</span>
                 <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla S</span>
               </div>
-              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Cinturón de Cuero</h3>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name"><a href="producto.html#prod-cinturon" class="transition-colors hover:text-orange-600">Cinturón de Cuero</a></h3>
               <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Hebilla de acero pulido y cuero grueso. Un básico indispensable.</p>
               <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="22">22</span></p>
@@ -299,7 +340,9 @@
         </p>
         <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
           <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a>
           <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+          <a href="Formulario.html" class="transition-colors hover:text-orange-600">Checkout</a>
         </nav>
       </div>
     </footer>

@@ -1,160 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Maison Lune | Home</title>
-		<meta
-			name="description"
-			content="Home de tienda online de ropa con estilo moderno y minimalista."
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | Código Urbano</title>
+    <meta name="description" content="Bienvenido a Código Urbano. Explora el catálogo, agrega productos al carrito y completa tu compra en un flujo simple y guiado." />
 
-		<script src="https://cdn.tailwindcss.com"></script>
-	</head>
-	<body class="bg-neutral-50 text-neutral-900 antialiased">
-		<header class="sticky top-0 z-20 border-b border-neutral-200 bg-white">
-			<nav
-				aria-label="Navegacion principal"
-				class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8"
-			>
-				<a href="#" class="text-xl font-semibold tracking-wide">Maison Lune</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
 
-				<form action="#" method="get" class="w-full md:max-w-md">
-					<label for="search" class="sr-only">Buscar productos</label>
-					<input
-						id="search"
-						name="q"
-						type="search"
-						placeholder="Buscar ropa, categorias..."
-						class="w-full rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm outline-none transition focus:border-neutral-500"
-					/>
-				</form>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-				<ul class="flex items-center gap-4 text-sm font-medium">
-					<li><a href="#" class="rounded-full px-3 py-2 hover:bg-neutral-100">Mi cuenta</a></li>
-					<li><a href="#" class="rounded-full px-3 py-2 hover:bg-neutral-100">Carrito</a></li>
-				</ul>
-			</nav>
-		</header>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Inicio | Código Urbano",
+        "description": "Página de inicio del flujo simulado de compra de Código Urbano.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Código Urbano"
+        }
+      }
+    </script>
+  </head>
 
-		<main>
-			<section class="border-b border-neutral-200 bg-neutral-900 text-white">
-				<div
-					class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-2 md:items-center lg:px-8"
-				>
-					<article class="space-y-5">
-						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-300">
-							Nueva coleccion
-						</p>
-						<h1 class="text-4xl font-semibold leading-tight sm:text-5xl">
-							Moda minimalista para tu dia a dia
-						</h1>
-						<p class="max-w-lg text-sm text-neutral-300 sm:text-base">
-							Descubre prendas modernas, cortes limpios y materiales comodos para crear
-							looks versatiles en cualquier temporada.
-						</p>
-						<a
-							href="#"
-							class="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200"
-						>
-							Explorar coleccion
-						</a>
-					</article>
+  <body class="min-h-screen bg-[radial-gradient(circle_at_8%_8%,#ffedd5_0,transparent_35%),radial-gradient(circle_at_90%_12%,#fdba74_0,transparent_30%),#fffaf3] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-stone-900 focus:px-5 focus:py-3 focus:font-bold focus:text-white focus:outline-none focus:ring-4 focus:ring-orange-500/50">
+      Saltar al contenido
+    </a>
 
-					<article>
-						<img
-							src="https://placehold.co/900x1100"
-							alt="Modelo vistiendo conjunto moderno y minimalista en tonos neutros"
-							class="h-80 w-full rounded-3xl object-cover sm:h-96 md:h-[32rem]"
-						/>
-					</article>
-				</div>
-			</section>
+    <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
+          Código Urbano<span class="text-orange-500">.</span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center gap-2 text-sm font-semibold sm:gap-4 sm:text-base">
+            <li><a href="index.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Inicio</a></li>
+            <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Catálogo</a></li>
+            <li><a href="carrito.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Carrito</a></li>
+            <li><a href="Formulario.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Checkout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-			<section class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-				<div class="mb-6 flex items-center justify-between gap-4">
-					<h2 class="text-2xl font-semibold sm:text-3xl">Productos destacados</h2>
-					<a href="#" class="text-sm font-medium text-neutral-700 hover:underline">Ver todo</a>
-				</div>
+    <main id="contenido">
+      <section class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+        <article>
+          <span class="mb-6 inline-flex w-max items-center rounded-full bg-orange-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-700">Compra Urbana 2026</span>
+          <h1 class="font-['Sora',sans-serif] text-4xl font-extrabold leading-[1.1] tracking-tight text-stone-900 sm:text-6xl">
+            Tu estilo empieza en el catálogo y termina en un checkout simple.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-stone-600 sm:text-xl">
+            Simula una compra completa en cinco minutos: explora productos, revisa el carrito, completa el formulario y confirma tu pedido.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="catalog.html" class="rounded-full bg-orange-600 px-6 py-3 font-['Sora',sans-serif] text-sm font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700">Explorar catálogo</a>
+            <a href="carrito.html" class="rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-bold text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Ir al carrito</a>
+          </div>
+        </article>
 
-				<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-					<article class="rounded-2xl border border-neutral-200 bg-white p-3">
-						<img
-							src="https://placehold.co/600x760"
-							alt="Chaqueta beige de corte recto"
-							class="h-64 w-full rounded-xl object-cover"
-						/>
-						<h3 class="mt-3 text-base font-semibold">Chaqueta Sable</h3>
-						<p class="mt-1 text-sm text-neutral-600">129 EUR</p>
-					</article>
+        <aside class="relative overflow-hidden rounded-3xl border border-white bg-white/65 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm lg:p-10">
+          <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl"></div>
+          <h2 class="font-['Sora',sans-serif] text-2xl font-bold text-stone-900">Flujo simulado de compra</h2>
+          <ol class="mt-6 space-y-4 text-sm font-medium text-stone-700 sm:text-base">
+            <li class="flex gap-3"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500/10 font-bold text-orange-600">1</span><a href="catalog.html" class="hover:text-orange-600">Elige productos en el catálogo.</a></li>
+            <li class="flex gap-3"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500/10 font-bold text-orange-600">2</span><a href="carrito.html" class="hover:text-orange-600">Revisa cantidades y total en el carrito.</a></li>
+            <li class="flex gap-3"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500/10 font-bold text-orange-600">3</span><a href="Formulario.html" class="hover:text-orange-600">Completa tus datos de envío y pago.</a></li>
+            <li class="flex gap-3"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-600/10 font-bold text-teal-600">4</span><a href="Formulariop.html" class="hover:text-orange-600">Recibe confirmación y número de orden.</a></li>
+          </ol>
+        </aside>
+      </section>
 
-					<article class="rounded-2xl border border-neutral-200 bg-white p-3">
-						<img
-							src="https://placehold.co/600x760"
-							alt="Camisa blanca minimalista"
-							class="h-64 w-full rounded-xl object-cover"
-						/>
-						<h3 class="mt-3 text-base font-semibold">Camisa Lumiere</h3>
-						<p class="mt-1 text-sm text-neutral-600">79 EUR</p>
-					</article>
+      <section class="mx-auto w-full max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+        <div class="mb-6 flex items-center justify-between gap-4">
+          <h2 class="font-['Sora',sans-serif] text-2xl font-bold text-stone-900 sm:text-3xl">Productos destacados</h2>
+          <a href="catalog.html" class="text-sm font-semibold text-stone-600 transition-colors hover:text-orange-600">Ver todo el catálogo</a>
+        </div>
 
-					<article class="rounded-2xl border border-neutral-200 bg-white p-3">
-						<img
-							src="https://placehold.co/600x760"
-							alt="Pantalon negro de tiro alto"
-							class="h-64 w-full rounded-xl object-cover"
-						/>
-						<h3 class="mt-3 text-base font-semibold">Pantalon Nuit</h3>
-						<p class="mt-1 text-sm text-neutral-600">99 EUR</p>
-					</article>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white p-4 transition-all hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl">
+            <a href="producto.html#prod-runner" class="block">
+              <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" alt="Zapatillas Runner 150" class="h-56 w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </a>
+            <h3 class="mt-4 font-['Sora',sans-serif] text-base font-bold text-stone-900"><a href="producto.html#prod-runner" class="transition-colors hover:text-orange-600">Zapatillas Runner 150</a></h3>
+            <p class="mt-1 text-sm text-stone-500">$65.00</p>
+          </article>
 
-					<article class="rounded-2xl border border-neutral-200 bg-white p-3">
-						<img
-							src="https://placehold.co/600x760"
-							alt="Vestido midi en color marfil"
-							class="h-64 w-full rounded-xl object-cover"
-						/>
-						<h3 class="mt-3 text-base font-semibold">Vestido Ivoire</h3>
-						<p class="mt-1 text-sm text-neutral-600">119 EUR</p>
-					</article>
-				</div>
-			</section>
-		</main>
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white p-4 transition-all hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl">
+            <a href="producto.html#prod-camiseta" class="block">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Camiseta Grand Line" class="h-56 w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </a>
+            <h3 class="mt-4 font-['Sora',sans-serif] text-base font-bold text-stone-900"><a href="producto.html#prod-camiseta" class="transition-colors hover:text-orange-600">Camiseta Grand Line</a></h3>
+            <p class="mt-1 text-sm text-stone-500">$25.00</p>
+          </article>
 
-		<footer class="bg-neutral-900 text-neutral-200">
-			<div class="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 py-10 sm:px-6 md:grid-cols-3 lg:px-8">
-				<section>
-					<h2 class="text-sm font-semibold uppercase tracking-[0.12em] text-neutral-400">Tienda</h2>
-					<ul class="mt-3 space-y-2 text-sm">
-						<li><a href="#" class="hover:text-white">Novedades</a></li>
-						<li><a href="#" class="hover:text-white">Mujer</a></li>
-						<li><a href="#" class="hover:text-white">Hombre</a></li>
-						<li><a href="#" class="hover:text-white">Accesorios</a></li>
-					</ul>
-				</section>
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white p-4 transition-all hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl">
+            <a href="producto.html#prod-joggers" class="block">
+              <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80" alt="Joggers Palo Verde" class="h-56 w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </a>
+            <h3 class="mt-4 font-['Sora',sans-serif] text-base font-bold text-stone-900"><a href="producto.html#prod-joggers" class="transition-colors hover:text-orange-600">Joggers Palo Verde</a></h3>
+            <p class="mt-1 text-sm text-stone-500">$35.00</p>
+          </article>
 
-				<section>
-					<h2 class="text-sm font-semibold uppercase tracking-[0.12em] text-neutral-400">Soporte</h2>
-					<ul class="mt-3 space-y-2 text-sm">
-						<li><a href="#" class="hover:text-white">Envios</a></li>
-						<li><a href="#" class="hover:text-white">Devoluciones</a></li>
-						<li><a href="#" class="hover:text-white">Preguntas frecuentes</a></li>
-					</ul>
-				</section>
+          <article class="group overflow-hidden rounded-3xl border border-stone-200 bg-white p-4 transition-all hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl">
+            <a href="producto.html#prod-gorra" class="block">
+              <img src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=600&q=80" alt="Gorra Vintage Ajustable" class="h-56 w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </a>
+            <h3 class="mt-4 font-['Sora',sans-serif] text-base font-bold text-stone-900"><a href="producto.html#prod-gorra" class="transition-colors hover:text-orange-600">Gorra Vintage Ajustable</a></h3>
+            <p class="mt-1 text-sm text-stone-500">$18.00</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
-				<section>
-					<h2 class="text-sm font-semibold uppercase tracking-[0.12em] text-neutral-400">Contacto</h2>
-					<address class="mt-3 space-y-2 text-sm not-italic">
-						<p>Maison Lune</p>
-						<p>18 Rue des Etoiles, 75003 Paris</p>
-						<p>hola@maisonlune.fr</p>
-						<p>+33 1 40 00 00 00</p>
-					</address>
-				</section>
-			</div>
-			<div class="border-t border-neutral-800 px-4 py-4 text-center text-xs text-neutral-500 sm:px-6 lg:px-8">
-				<p>© 2026 Maison Lune. Todos los derechos reservados.</p>
-			</div>
-		</footer>
-	</body>
+    <footer class="mt-12 border-t border-stone-200 bg-white py-10 text-center sm:py-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-stone-500">
+          © 2026 <strong class="font-['Sora',sans-serif] font-bold text-stone-900">Código Urbano</strong>. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
+          <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a>
+          <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+          <a href="Formulario.html" class="transition-colors hover:text-orange-600">Checkout</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
