@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo | Código Urbano</title>
+    <meta name="description" content="Explora nuestra colección de moda urbana. Encuentra calzado, camisas, pantalones y accesorios de alta calidad. Filtra por categoría y talla." />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Código Urbano" />
+    <link rel="canonical" href="/" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Catálogo | Código Urbano" />
+    <meta property="og:description" content="Catálogo de moda con calzado, pantalones, camisas y accesorios. Filtros rápidos por categoría y talla." />
+    <meta property="og:url" content="/" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Catálogo Código Urbano",
+        "description": "Catálogo de moda con camisas, pantalones, calzado y accesorios.",
+        "inLanguage": "es",
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Nueva Colección",
+          "numberOfItems": 12
+        }
+      }
+    </script>
+  </head>
+
+  <body class="bg-[radial-gradient(circle_at_8%_8%,#ffedd5_0,transparent_35%),radial-gradient(circle_at_90%_12%,#fdba74_0,transparent_30%),#fffaf3] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
+    
+    <a href="#catalogo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-stone-900 focus:px-5 focus:py-3 focus:font-bold focus:text-white focus:outline-none focus:ring-4 focus:ring-orange-500/50">
+      Saltar al catálogo
+    </a>
+
+    <input id="cat-all" name="categoria" type="radio" class="peer/cat-all sr-only" checked />
+    <input id="cat-calzado" name="categoria" type="radio" class="peer/cat-calzado sr-only" />
+    <input id="cat-camisas" name="categoria" type="radio" class="peer/cat-camisas sr-only" />
+    <input id="cat-pantalones" name="categoria" type="radio" class="peer/cat-pantalones sr-only" />
+    <input id="cat-accesorios" name="categoria" type="radio" class="peer/cat-accesorios sr-only" />
+
+    <input id="size-all" name="talla" type="radio" class="peer/size-all sr-only" checked />
+    <input id="size-xs" name="talla" type="radio" class="peer/size-xs sr-only" />
+    <input id="size-s" name="talla" type="radio" class="peer/size-s sr-only" />
+    <input id="size-m" name="talla" type="radio" class="peer/size-m sr-only" />
+    <input id="size-l" name="talla" type="radio" class="peer/size-l sr-only" />
+    <input id="size-xl" name="talla" type="radio" class="peer/size-xl sr-only" />
+
+    <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
+          Código Urbano<span class="text-orange-500">.</span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm font-semibold sm:text-base">
+            <li><a href="index.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Inicio</a></li>
+            <li><a href="carrito.html" class="inline-block rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Carrito</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8" aria-labelledby="catalogo-titulo">
+        <div class="flex flex-col justify-center">
+          <span class="mb-6 inline-flex w-max items-center rounded-full bg-orange-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-700">Temporada 2026</span>
+          <h1 id="catalogo-titulo" class="font-['Sora',sans-serif] text-4xl font-extrabold leading-[1.1] tracking-tight text-stone-900 sm:text-6xl">
+            Viste con <br /> <span class="text-orange-600">propósito y estilo.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg text-stone-600 leading-relaxed sm:text-xl">
+            Descubre nuestra selección de calzado, camisas, pantalones y accesorios. Encuentra el fit perfecto para tu día a día en la ciudad.
+          </p>
+        </div>
+        
+        <aside class="relative overflow-hidden rounded-3xl border border-white bg-white/60 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-sm lg:p-10">
+          <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange-500/10 blur-3xl"></div>
+          <h2 class="font-['Sora',sans-serif] text-2xl font-bold text-stone-900">Envíos y Calidad</h2>
+          <ul class="mt-6 space-y-4 text-stone-700 font-medium">
+            <li class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10 text-orange-600">✓</span> Materiales duraderos y premium.
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10 text-orange-600">✓</span> Diseños estructurados y semánticos.
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-teal-600/10 text-teal-600">⚡</span> Filtrado ultrarrápido por Tailwind.
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Controles de filtro">
+        <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+          <div class="mb-6">
+            <h2 class="font-['Sora',sans-serif] text-2xl font-bold text-stone-900">Filtrar prendas</h2>
+            <p class="mt-1 text-stone-500">Selecciona categoría y talla para encontrar tu estilo ideal.</p>
+          </div>
+          
+          <div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            <fieldset>
+              <legend class="mb-4 text-xs font-bold uppercase tracking-widest text-stone-400">Categoría</legend>
+              <div class="flex flex-wrap gap-2.5">
+                <label for="cat-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-all:border-orange-500 peer-checked/cat-all:bg-orange-500 peer-checked/cat-all:text-white">Todas</label>
+                <label for="cat-calzado" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-calzado:border-orange-500 peer-checked/cat-calzado:bg-orange-500 peer-checked/cat-calzado:text-white">Calzado</label>
+                <label for="cat-camisas" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-camisas:border-orange-500 peer-checked/cat-camisas:bg-orange-500 peer-checked/cat-camisas:text-white">Camisas</label>
+                <label for="cat-pantalones" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-pantalones:border-orange-500 peer-checked/cat-pantalones:bg-orange-500 peer-checked/cat-pantalones:text-white">Pantalones</label>
+                <label for="cat-accesorios" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/cat-accesorios:border-orange-500 peer-checked/cat-accesorios:bg-orange-500 peer-checked/cat-accesorios:text-white">Accesorios</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mb-4 text-xs font-bold uppercase tracking-widest text-stone-400">Talla</legend>
+              <div class="flex flex-wrap gap-2.5">
+                <label for="size-all" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-all:border-teal-600 peer-checked/size-all:bg-teal-600 peer-checked/size-all:text-white">Todas</label>
+                <label for="size-xs" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-xs:border-teal-600 peer-checked/size-xs:bg-teal-600 peer-checked/size-xs:text-white">XS</label>
+                <label for="size-s" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-s:border-teal-600 peer-checked/size-s:bg-teal-600 peer-checked/size-s:text-white">S</label>
+                <label for="size-m" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-m:border-teal-600 peer-checked/size-m:bg-teal-600 peer-checked/size-m:text-white">M</label>
+                <label for="size-l" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-l:border-teal-600 peer-checked/size-l:bg-teal-600 peer-checked/size-l:text-white">L</label>
+                <label for="size-xl" class="cursor-pointer rounded-xl border-2 border-stone-100 bg-stone-50 px-5 py-2.5 text-sm font-bold text-stone-600 transition-all hover:bg-stone-100 peer-checked/size-xl:border-teal-600 peer-checked/size-xl:bg-teal-600 peer-checked/size-xl:text-white">XL</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo" class="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8" aria-label="Listado de productos">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="list">
+          
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" alt="Zapatillas Runner 150" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-orange-50 px-2.5 py-1 text-xs font-bold text-orange-600">Calzado</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Zapatillas Runner 150</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Comodidad y agarre urbano para tu día a día, perfectas para moverte ágil por la ciudad.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="65">65</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600&q=80" alt="Botas Clásicas Premium" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-orange-50 px-2.5 py-1 text-xs font-bold text-orange-600">Calzado</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla L</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Botas Clásicas Premium</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Cuero genuino resistente a la abrasión, diseño estructurado y duradero.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="95">95</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80" alt="Chaqueta de Malla HWK" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla L</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Chaqueta de Malla HWK</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Ventilación superior y seguridad reforzada. Ideal para rutas largas o uso diario.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="110">110</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Camiseta Grand Line" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla S</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Camiseta Grand Line</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Algodón peinado con estampado de alta densidad inspirado en aventuras piratas.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="25">25</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-pantalones:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80" alt="Sobrecamisa Oxford" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-teal-50 px-2.5 py-1 text-xs font-bold text-teal-700">Camisas</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Sobrecamisa Oxford</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Corte regular y tela transpirable, perfecta para estructurar cualquier outfit.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="45">45</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80" alt="Joggers Palo Verde" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-stone-800 px-2.5 py-1 text-xs font-bold text-white">Pantalones</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla M</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Joggers Palo Verde</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Joggers elásticos de secado rápido, creados para resistir el ritmo activo.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="35">35</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-accesorios:hidden peer-checked/size-xs:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Jeans Rectos Flexbox" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-stone-800 px-2.5 py-1 text-xs font-bold text-white">Pantalones</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla XL</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Jeans Rectos Flexbox</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Denim con tecnología elástica oculta. Alineación perfecta y comodidad semántica.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="55">55</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/size-s:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=600&q=80" alt="Gorra Vintage Ajustable" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-700">Accesorios</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla XS</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Gorra Vintage Ajustable</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Algodón lavado para un look retro, con cierre metálico ajustable.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="18">18</span></p>
+              </div>
+            </div>
+          </article>
+
+          <article role="listitem" class="group relative flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl peer-checked/cat-calzado:hidden peer-checked/cat-camisas:hidden peer-checked/cat-pantalones:hidden peer-checked/size-xs:hidden peer-checked/size-m:hidden peer-checked/size-l:hidden peer-checked/size-xl:hidden" itemscope itemtype="https://schema.org/Product">
+            <div class="relative flex aspect-[4/3] w-full items-center justify-center bg-stone-100 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=600&q=80" alt="Cinturón de Cuero" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-700">Accesorios</span>
+                <span class="rounded-lg bg-stone-100 px-2.5 py-1 text-xs font-bold text-stone-500">Talla S</span>
+              </div>
+              <h3 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900" itemprop="name">Cinturón de Cuero</h3>
+              <p class="mt-2 flex-1 text-sm text-stone-600" itemprop="description">Hebilla de acero pulido y cuero grueso. Un básico indispensable.</p>
+              <div class="mt-4 flex items-center justify-between border-t border-stone-100 pt-4" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <p class="text-xl font-extrabold text-stone-900"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="22">22</span></p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 border-t border-stone-200 bg-white py-10 text-center sm:py-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-stone-500">
+          © 2026 <strong class="font-['Sora',sans-serif] font-bold text-stone-900">Código Urbano</strong>. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
+          <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
