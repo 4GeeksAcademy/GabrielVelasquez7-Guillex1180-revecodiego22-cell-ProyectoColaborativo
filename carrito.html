@@ -12,6 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
     
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Tu Carrito | Código Urbano",
+        "description": "Resumen del carrito de compras de Código Urbano.",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Código Urbano"
+        }
+      }
+    </script>
   </head>
 
   <body class="bg-[radial-gradient(circle_at_8%_8%,#ffedd5_0,transparent_35%),radial-gradient(circle_at_90%_12%,#fdba74_0,transparent_30%),#fffaf3] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white min-h-screen flex flex-col">
@@ -22,14 +36,15 @@
 
     <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
       <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="catalog.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
+        <a href="index.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
           Código Urbano<span class="text-orange-500">.</span>
         </a>
         <nav aria-label="Navegación principal">
           <ul class="flex flex-wrap items-center gap-2 sm:gap-4 text-sm font-semibold sm:text-base">
-            <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
+            <li><a href="index.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
             <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Catálogo</a></li>
             <li><a href="carrito.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Carrito</a></li>
+            <li><a href="Formulario.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Checkout</a></li>
           </ul>
         </nav>
       </div>
@@ -76,7 +91,7 @@
               
               <div class="flex-1 text-center sm:text-left">
                 <h3 class="font-['Sora',sans-serif] text-base font-bold text-stone-900 hover:text-orange-600 transition-colors">
-                  <a href="producto.html">Zapatillas Runner 150</a>
+                  <a href="producto.html#prod-runner">Zapatillas Runner 150</a>
                 </h3>
                 <p class="text-xs font-medium text-stone-500 mt-1 flex flex-wrap justify-center sm:justify-start gap-2">
                   <span><strong>Talla:</strong> M</span>
@@ -111,7 +126,7 @@
               </div>
               <div class="flex-1 text-center sm:text-left">
                 <h3 class="font-['Sora',sans-serif] text-base font-bold text-stone-900 hover:text-orange-600 transition-colors">
-                  <a href="#">Chaqueta de Malla HWK</a>
+                  <a href="producto.html#prod-chaqueta">Chaqueta de Malla HWK</a>
                 </h3>
                 <p class="text-xs font-medium text-stone-500 mt-1 flex flex-wrap justify-center sm:justify-start gap-2">
                   <span><strong>Talla:</strong> L</span>
@@ -144,7 +159,7 @@
               </div>
               <div class="flex-1 text-center sm:text-left">
                 <h3 class="font-['Sora',sans-serif] text-base font-bold text-stone-900 hover:text-orange-600 transition-colors">
-                  <a href="#">Gorra Vintage Ajustable</a>
+                  <a href="producto.html#prod-gorra">Gorra Vintage Ajustable</a>
                 </h3>
                 <p class="text-xs font-medium text-stone-500 mt-1 flex flex-wrap justify-center sm:justify-start gap-2">
                   <span><strong>Talla:</strong> Única</span>
@@ -208,9 +223,9 @@
               </div>
             </div>
 
-            <button type="button" class="mt-6 w-full rounded-full bg-orange-600 px-6 py-4 text-center font-['Sora',sans-serif] text-base font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/30 active:scale-[0.99]">
+            <a href="Formulario.html" class="mt-6 block w-full rounded-full bg-orange-600 px-6 py-4 text-center font-['Sora',sans-serif] text-base font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/30 active:scale-[0.99]">
               Proceder al pago
-            </button>
+            </a>
           </aside>
 
           <div class="rounded-2xl border border-stone-200/60 bg-white/50 p-5 text-xs text-stone-500 space-y-3 shadow-inner">
@@ -228,5 +243,19 @@
 
       </div>
     </main>
+
+    <footer class="mt-12 border-t border-stone-200 bg-white py-10 text-center sm:py-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-stone-500">
+          © 2026 <strong class="font-['Sora',sans-serif] font-bold text-stone-900">Código Urbano</strong>. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
+          <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a>
+          <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+          <a href="Formulario.html" class="transition-colors hover:text-orange-600">Checkout</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

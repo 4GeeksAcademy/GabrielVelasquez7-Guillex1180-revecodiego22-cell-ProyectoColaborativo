@@ -4,16 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vista de producto | Código Urbano</title>
-    <meta name="description" content="Descubre los detalles de las Zapatillas Runner 150: materiales premium, tallas disponibles y beneficios para un estilo urbano versátil." />
+    <meta name="description" content="Detalle de producto de Código Urbano con flujo directo a carrito y checkout." />
     <meta name="robots" content="index,follow" />
-    <meta name="author" content="Código Urbano" />
-    <link rel="canonical" href="/producto.html" />
-
-    <meta property="og:type" content="product" />
-    <meta property="og:title" content="Zapatillas Runner 150 | Código Urbano" />
-    <meta property="og:description" content="Explora una vista detallada del producto con precio, tallas, cantidad y descripción de uso." />
-    <meta property="og:url" content="/producto.html" />
-    <meta property="og:locale" content="es_ES" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,39 +18,35 @@
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Zapatillas Runner 150",
-        "description": "Zapatillas urbanas con amortiguación ligera, acabado premium y diseño versátil para uso diario.",
+        "description": "Producto de referencia para la vista dinámica de detalle en Código Urbano.",
         "sku": "CU-RUN-150",
-        "brand": {
-          "@type": "Brand",
-          "name": "Código Urbano"
-        },
         "offers": {
           "@type": "Offer",
           "priceCurrency": "USD",
           "price": "65",
-          "availability": "https://schema.org/InStock",
-          "url": "/producto.html"
+          "availability": "https://schema.org/InStock"
         }
       }
     </script>
   </head>
 
-  <body class="min-h-screen bg-[radial-gradient(circle_at_12%_12%,#ffedd5_0,transparent_34%),radial-gradient(circle_at_88%_10%,#fdba74_0,transparent_28%),linear-gradient(180deg,#fffaf3_0%,#fff7ed_100%)] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
+  <body class="min-h-screen bg-[radial-gradient(circle_at_8%_8%,#ffedd5_0,transparent_35%),radial-gradient(circle_at_90%_12%,#fdba74_0,transparent_30%),#fffaf3] font-['Outfit',sans-serif] text-stone-900 antialiased selection:bg-orange-500 selection:text-white">
     <a href="#detalle-producto" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-stone-900 focus:px-5 focus:py-3 focus:font-bold focus:text-white focus:outline-none focus:ring-4 focus:ring-orange-500/50">
-      Saltar al contenido del producto
+      Saltar al detalle
     </a>
 
     <header class="sticky top-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-md" aria-label="Barra de navegación principal">
       <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="catalog.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
+        <a href="index.html" class="font-['Sora',sans-serif] text-2xl font-extrabold tracking-tight text-stone-900 transition-colors hover:text-orange-600">
           Código Urbano<span class="text-orange-500">.</span>
         </a>
         <nav aria-label="Navegación principal">
           <ul class="flex flex-wrap items-center gap-2 text-sm font-semibold sm:gap-4 sm:text-base">
-            <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
+            <li><a href="index.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Inicio</a></li>
             <li><a href="catalog.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Catálogo</a></li>
-            <li><a href="producto.html" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Producto</a></li>
+            <li><a href="producto.html#prod-runner" aria-current="page" class="rounded-full bg-orange-600 px-5 py-2.5 text-white shadow-sm transition-all hover:bg-orange-700">Producto</a></li>
             <li><a href="carrito.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Carrito</a></li>
+            <li><a href="Formulario.html" class="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Checkout</a></li>
           </ul>
         </nav>
       </div>
@@ -67,163 +55,146 @@
     <main id="detalle-producto" class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <section class="mb-6" aria-label="Migas de pan">
         <ol class="flex flex-wrap items-center gap-2 text-sm font-medium text-stone-500">
-          <li><a href="catalog.html" class="transition-colors hover:text-orange-600">Inicio</a></li>
+          <li><a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a></li>
           <li aria-hidden="true">/</li>
           <li><a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a></li>
           <li aria-hidden="true">/</li>
-          <li class="text-stone-900">Zapatillas Runner 150</li>
+          <li id="breadcrumb-name" class="text-stone-900">Zapatillas Runner 150</li>
         </ol>
       </section>
 
-      <section class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start" itemscope itemtype="https://schema.org/Product">
-        <article class="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-          <div class="relative aspect-[4/5] overflow-hidden bg-stone-100">
-            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1200&q=80" alt="Zapatillas Runner 150 en color blanco urbano" class="h-full w-full object-cover" itemprop="image" />
-            <span class="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-orange-600 shadow-sm">Nueva cápsula</span>
-          </div>
-          <div class="grid gap-4 border-t border-stone-100 bg-stone-50/70 p-5 sm:grid-cols-3 sm:p-6">
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Amortiguación</p>
-              <p class="mt-2 text-sm font-semibold text-stone-700">Espuma ligera de respuesta rápida</p>
-            </div>
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Acabado</p>
-              <p class="mt-2 text-sm font-semibold text-stone-700">Malla transpirable y refuerzo lateral</p>
-            </div>
-            <div class="rounded-2xl bg-white p-4 shadow-sm">
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Entrega</p>
-              <p class="mt-2 text-sm font-semibold text-stone-700">Envío estándar en 48 horas</p>
-            </div>
+      <section class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <article class="overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm">
+          <div class="h-[22rem] sm:h-[30rem]">
+            <img id="product-image" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80" alt="Zapatillas Runner 150" class="h-full w-full object-cover" />
           </div>
         </article>
 
-        <article class="space-y-6 rounded-[2rem] border border-stone-200 bg-white/90 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] backdrop-blur-sm sm:p-8">
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-orange-700">Calzado premium</span>
-            <span class="rounded-full bg-teal-600/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-teal-700">Stock inmediato</span>
+        <article class="space-y-6 rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+          <div class="flex flex-wrap gap-3">
+            <span id="product-category" class="rounded-full bg-orange-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-orange-700">Calzado</span>
+            <span class="rounded-full bg-teal-600/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-teal-700">Disponible</span>
           </div>
 
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-stone-400">Referencia <span itemprop="sku" class="text-stone-600">CU-RUN-150</span></p>
-            <h1 class="mt-3 font-['Sora',sans-serif] text-4xl font-extrabold tracking-tight text-stone-900 sm:text-5xl" itemprop="name">Zapatillas Runner 150</h1>
-            <p class="mt-4 max-w-xl text-lg leading-relaxed text-stone-600" itemprop="description">
-              Una silueta urbana pensada para jornadas largas: ligera, flexible y con una presencia limpia que combina con denim, joggers o looks monocromáticos.
-            </p>
+          <h1 id="product-name" class="font-['Sora',sans-serif] text-4xl font-extrabold tracking-tight text-stone-900 sm:text-5xl">Zapatillas Runner 150</h1>
+          <p id="product-description" class="text-lg leading-relaxed text-stone-600">Comodidad y agarre urbano para tu día a día, con amortiguación ligera y diseño versátil.</p>
+
+          <div class="rounded-2xl bg-stone-50 p-5">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Precio</p>
+            <p id="product-price" class="mt-2 font-['Sora',sans-serif] text-3xl font-extrabold text-orange-600">$65.00</p>
           </div>
 
-          <div class="grid gap-4 rounded-3xl bg-stone-50 p-5 sm:grid-cols-2">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Precio</p>
-              <p class="mt-2 font-['Sora',sans-serif] text-3xl font-extrabold text-orange-600" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="65">65</span>
-              </p>
-            </div>
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Talla sugerida</p>
-              <div class="mt-2 flex flex-wrap gap-2">
-                <span class="rounded-xl border border-stone-200 bg-white px-3 py-2 text-sm font-bold text-stone-700">39</span>
-                <span class="rounded-xl border border-orange-500 bg-orange-500 px-3 py-2 text-sm font-bold text-white">40</span>
-                <span class="rounded-xl border border-stone-200 bg-white px-3 py-2 text-sm font-bold text-stone-700">41</span>
-                <span class="rounded-xl border border-stone-200 bg-white px-3 py-2 text-sm font-bold text-stone-700">42</span>
-              </div>
-            </div>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <a href="carrito.html" class="rounded-full bg-orange-600 px-6 py-3 text-center font-['Sora',sans-serif] text-sm font-bold text-white transition-all hover:bg-orange-700">Agregar al carrito</a>
+            <a href="Formulario.html" class="rounded-full border border-stone-200 bg-white px-6 py-3 text-center text-sm font-bold text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">Ir al checkout</a>
           </div>
 
-          <form class="grid gap-5 rounded-3xl border border-stone-200 p-5 sm:p-6" aria-label="Configuración de compra">
-            <div>
-              <label for="cantidad" class="mb-2 block text-sm font-bold text-stone-700">Cantidad</label>
-              <div class="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 p-1 shadow-inner">
-                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold text-stone-500 transition hover:bg-white hover:text-stone-900" aria-label="Reducir cantidad">-</button>
-                <input id="cantidad" name="cantidad" type="number" min="1" value="1" class="w-16 border-0 bg-transparent text-center text-base font-bold text-stone-900 focus:outline-none" />
-                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full text-lg font-bold text-stone-500 transition hover:bg-white hover:text-stone-900" aria-label="Aumentar cantidad">+</button>
-              </div>
-            </div>
-
-            <div class="grid gap-3 sm:grid-cols-[1fr_auto]">
-              <a href="carrito.html" class="inline-flex items-center justify-center rounded-full bg-orange-600 px-6 py-4 text-center font-['Sora',sans-serif] text-base font-bold text-white shadow-lg shadow-orange-600/20 transition-all hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl hover:shadow-orange-600/30">
-                Agregar al carrito
-              </a>
-              <a href="catalog.html" class="inline-flex items-center justify-center rounded-full border border-stone-200 bg-white px-6 py-4 text-center text-sm font-bold text-stone-700 transition-all hover:border-orange-500 hover:text-orange-500">
-                Seguir comprando
-              </a>
-            </div>
-          </form>
-
-          <dl class="grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl border border-stone-200 bg-white p-4">
-              <dt class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Color</dt>
-              <dd class="mt-2 text-sm font-semibold text-stone-700">Blanco Urbano</dd>
-            </div>
-            <div class="rounded-2xl border border-stone-200 bg-white p-4">
-              <dt class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Código</dt>
-              <dd class="mt-2 text-sm font-semibold text-stone-700">RUN-150-WHT</dd>
-            </div>
-            <div class="rounded-2xl border border-stone-200 bg-white p-4">
-              <dt class="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">Disponibilidad</dt>
-              <dd class="mt-2 text-sm font-semibold text-teal-700">Disponible online</dd>
-            </div>
-          </dl>
+          <a href="catalog.html" class="inline-flex text-sm font-semibold text-stone-600 transition-colors hover:text-orange-600">Volver al catálogo</a>
         </article>
-      </section>
-
-      <section class="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]" aria-labelledby="descripcion-producto">
-        <article class="rounded-[2rem] border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 id="descripcion-producto" class="font-['Sora',sans-serif] text-2xl font-bold text-stone-900">Descripción detallada</h2>
-          <div class="mt-6 grid gap-6">
-            <section>
-              <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-stone-400">Materiales</h3>
-              <p class="mt-3 leading-relaxed text-stone-600">
-                Parte superior en malla técnica con refuerzo termosellado, suela exterior de goma flexible y plantilla acolchada diseñada para reducir la fatiga durante caminatas prolongadas.
-              </p>
-            </section>
-            <section>
-              <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-stone-400">Uso recomendado</h3>
-              <p class="mt-3 leading-relaxed text-stone-600">
-                Ideales para jornadas urbanas, viajes cortos, oficinas creativas y salidas casuales donde necesites equilibrio entre presencia visual y comodidad sostenida.
-              </p>
-            </section>
-          </div>
-        </article>
-
-        <aside class="rounded-[2rem] border border-stone-200 bg-stone-900 p-6 text-white shadow-sm sm:p-8">
-          <h2 class="font-['Sora',sans-serif] text-2xl font-bold">Por qué destaca</h2>
-          <ul class="mt-6 space-y-4 text-sm leading-relaxed text-stone-200">
-            <li class="rounded-2xl border border-white/10 bg-white/5 p-4">Perfil limpio con contraste sutil para combinar con prendas neutras o capas técnicas.</li>
-            <li class="rounded-2xl border border-white/10 bg-white/5 p-4">Construcción ligera para uso intensivo en ciudad sin sacrificar soporte lateral.</li>
-            <li class="rounded-2xl border border-white/10 bg-white/5 p-4">Encaja en el flujo del prototipo desde catálogo a carrito con una llamada a la acción clara.</li>
-          </ul>
-        </aside>
       </section>
     </main>
 
-    <footer class="mt-12 border-t border-stone-200 bg-white/70 backdrop-blur-sm">
-      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 text-sm text-stone-600 sm:px-6 md:grid-cols-3 lg:px-8">
-        <section>
-          <h2 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900">Categorías</h2>
-          <ul class="mt-4 space-y-2">
-            <li><a href="catalog.html" class="transition hover:text-orange-600">Calzado</a></li>
-            <li><a href="catalog.html" class="transition hover:text-orange-600">Camisas</a></li>
-            <li><a href="catalog.html" class="transition hover:text-orange-600">Pantalones</a></li>
-            <li><a href="catalog.html" class="transition hover:text-orange-600">Accesorios</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900">Legal</h2>
-          <ul class="mt-4 space-y-2">
-            <li><a href="#" class="transition hover:text-orange-600">Términos y condiciones</a></li>
-            <li><a href="#" class="transition hover:text-orange-600">Política de privacidad</a></li>
-            <li><a href="#" class="transition hover:text-orange-600">Sobre la marca</a></li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="font-['Sora',sans-serif] text-lg font-bold text-stone-900">Contacto</h2>
-          <ul class="mt-4 space-y-2">
-            <li>hello@codigourbano.shop</li>
-            <li>+33 1 84 00 24 26</li>
-            <li>Paris Studio, Rue des Fleurs 18</li>
-          </ul>
-        </section>
+    <footer class="mt-12 border-t border-stone-200 bg-white py-10 text-center sm:py-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+        <p class="text-sm font-medium text-stone-500">
+          © 2026 <strong class="font-['Sora',sans-serif] font-bold text-stone-900">Código Urbano</strong>. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Enlaces secundarios del pie de página" class="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-stone-600">
+          <a href="index.html" class="transition-colors hover:text-orange-600">Inicio</a>
+          <a href="catalog.html" class="transition-colors hover:text-orange-600">Catálogo</a>
+          <a href="producto.html#prod-runner" class="transition-colors hover:text-orange-600">Producto</a>
+          <a href="carrito.html" class="transition-colors hover:text-orange-600">Carrito</a>
+          <a href="Formulario.html" class="transition-colors hover:text-orange-600">Checkout</a>
+        </nav>
       </div>
     </footer>
+
+    <script>
+      const productMap = {
+        "prod-runner": {
+          name: "Zapatillas Runner 150",
+          category: "Calzado",
+          price: "$65.00",
+          image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80",
+          description: "Comodidad y agarre urbano para tu día a día, con amortiguación ligera y diseño versátil."
+        },
+        "prod-botas": {
+          name: "Botas Clásicas Premium",
+          category: "Calzado",
+          price: "$95.00",
+          image: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=1200&q=80",
+          description: "Cuero resistente con estructura robusta para un look urbano elegante y durable."
+        },
+        "prod-chaqueta": {
+          name: "Chaqueta de Malla HWK",
+          category: "Camisas",
+          price: "$110.00",
+          image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=1200&q=80",
+          description: "Ventilación superior y seguridad reforzada para rutas largas o movilidad diaria."
+        },
+        "prod-camiseta": {
+          name: "Camiseta Grand Line",
+          category: "Camisas",
+          price: "$25.00",
+          image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1200&q=80",
+          description: "Algodón peinado y estampado de alta densidad para looks casuales con identidad."
+        },
+        "prod-sobrecamisa": {
+          name: "Sobrecamisa Oxford",
+          category: "Camisas",
+          price: "$45.00",
+          image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=1200&q=80",
+          description: "Corte regular y tela transpirable para estructurar outfits en cualquier temporada."
+        },
+        "prod-joggers": {
+          name: "Joggers Palo Verde",
+          category: "Pantalones",
+          price: "$35.00",
+          image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=1200&q=80",
+          description: "Tejido flexible y secado rápido para una rutina activa con estilo urbano."
+        },
+        "prod-jeans": {
+          name: "Jeans Rectos Flexbox",
+          category: "Pantalones",
+          price: "$55.00",
+          image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=1200&q=80",
+          description: "Denim elástico con ajuste cómodo y estructura limpia para uso diario."
+        },
+        "prod-gorra": {
+          name: "Gorra Vintage Ajustable",
+          category: "Accesorios",
+          price: "$18.00",
+          image: "https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=1200&q=80",
+          description: "Algodón lavado con cierre metálico ajustable y acabado retro de alta rotación."
+        },
+        "prod-cinturon": {
+          name: "Cinturón de Cuero",
+          category: "Accesorios",
+          price: "$22.00",
+          image: "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=1200&q=80",
+          description: "Cuero grueso con hebilla de acero pulido, ideal para completar looks casuales o formales."
+        }
+      };
+
+      function renderProduct() {
+        const fallback = "prod-runner";
+        const hash = window.location.hash.replace("#", "");
+        const key = productMap[hash] ? hash : fallback;
+        const product = productMap[key];
+
+        document.getElementById("breadcrumb-name").textContent = product.name;
+        document.getElementById("product-name").textContent = product.name;
+        document.getElementById("product-category").textContent = product.category;
+        document.getElementById("product-price").textContent = product.price;
+        document.getElementById("product-description").textContent = product.description;
+
+        const image = document.getElementById("product-image");
+        image.src = product.image;
+        image.alt = product.name;
+      }
+
+      window.addEventListener("hashchange", renderProduct);
+      renderProduct();
+    </script>
   </body>
 </html>
